@@ -1,0 +1,303 @@
+/*first you put the common properties for entire page like font , margin, padding , bg, color,overflow*/
+/*make the main div as the flex */
+/*divide the parts of the web page by giving them separate colors*/
+/*now giving sizing(height , width) for each part including main div by seeing the original website */
+/*set the border-radius bec all the boxes are curves soo that you will see the better separated layout*/
+/*set the colors and different shades...for that you have to take the screenshot of the original websitea d paste oin the color picker tehn you will get to knoe what exact color that they have used in the website soo you can use the*/
+/*went to the sidebar part of webpage tehn divided taht by seeing the original webpage tehn kept teh required content , then also you can see who they kept the content on the original site by doing inspect optiona nd see whether they ahev used the ul to keep the things one by one or how they have used see*/
+/*divided the nav into 2 divs  and gave dispaly:flex to nav....see we agve the display flex for the very main div and giving the dispaly:flex for the sub divs also*/
+/*setting all paddimg ,margin, line-height propreties using rem by seeing the original web site*/
+body{
+       font-family: "Montserrat", sans-serif;
+       margin:0;
+       background-color: black;
+       color: #fff;
+       overflow:hidden; /*this property hides the extra info present down the screen , there will be no scroll bar appears and we cannot just scroll , we cannot see the below content , we can able to see the viewport content , not we kept overflow:hidden to the entire web page then afterwards we put overflow:auto or scrool to the main part only which needs to be scrolled*/
+}
+.main{
+      
+      display: flex;
+       /*we want to make the main div as a container and treat all the other divs inside it as a flex items and do the operation on it*/
+      height: 100vh;
+      padding:0.5rem  /*by putting this , there will be a padding inside the main div , so the entire content comes middle and looks good*/
+}   
+.sidebar{
+      background-color: #000;
+      width:340px;
+      border-radius: 1rem;  /* 1rem =16px ...for responsiveness*/
+      margin-right:0.5rem
+}
+.main-content{
+      background-color: #121212;
+      flex:1;   /*what is the left sapce in the container ,, i need that space*/
+      border-radius: 1rem; 
+      overflow:auto;  /*when you put auto overflow,then says when you wnat i mean when you have more text or content then the scrolll bar appears otherwise no */
+      padding:0 1.5rem 0 1.5rem
+}
+.music-player{
+      background-color: black;
+      position:fixed;
+      bottom:0;
+      width:100%;
+      height:72px;
+}
+a{
+      text-decoration: none;
+      color: #fff;
+}
+.nav{
+      background-color: #121212;
+      border-radius: 1rem;
+      display: flex;
+      flex-direction: column; /*here you have to give teh flex-direction property first then flex-wrap.....this is the very very best method (using flex-direction:columns;) to makes div align up and down by including the dispaly:flex*/
+      justify-content: center;
+      height: 100px;
+      padding:0.5rem 0.75rem
+      
+
+}
+.nav-option{
+      line-height:2.5rem;
+      opacity:0.7 ;
+      padding:0.5rem 0.75rem;
+}
+.nav-option:hover{
+    
+      opacity:1 ;
+}
+.nav-option i{
+      font-size: 1.25rem;
+}
+.nav-option a{
+      font-size: 1rem;
+      margin-left:1rem;
+}
+.library{
+      background-color: #121212;
+      border-radius: 1rem;
+      height: 100%;
+      margin-top:0.5rem;
+      padding:0.5rem 0.75rem;
+}
+.options{
+      display: flex;
+      justify-content:space-between ;
+      align-items: center;
+
+}
+.lib-option img{
+      height:1.25rem;  /*here for image we cannot give line-height or font size soo height and width given*/
+      width:1.25rem
+}
+.icons{
+      font-size: 1.5rem;
+      display: flex;
+}
+.icons i{
+      opacity:0.7;
+      margin-right:1rem;
+}
+.icons i:hover{
+      opacity:1;
+
+}
+.box{
+      height:8rem;
+      background-color: #232323;
+      border-radius: 0.75rem;
+      margin:0.75rem 0 1.75rem 0;
+      padding:0.25rem 1rem;    /*Do one box properly and copy paste the same properties in box 2*/
+}
+.box-p1{
+      font-size:1rem;
+      font-weight:500;
+}
+.box-p2{
+      font-size: 0.85rem;
+      opacity:0.75;
+
+}
+.badge{
+      background-color: white;
+      border:none;
+      border-radius: 100px;
+      padding:0.25rem 1rem;
+      font-weight: 700 ;
+      margin-top:0.5rem;
+      height:1.5rem;
+      width:fit-content; /*to fit the content inside the bitton*/
+}
+.sticky-nav{
+      position:sticky; /*here specifically they are  using position: sticky not fixed , */
+      top:0;
+      background-color:#121212 ;
+      display: flex;
+      justify-content: space-between;
+      align-items:center;
+      padding:1rem 0 1rem 0;
+      z-index: 10;
+}
+.sticky-nav-icons i{
+      font-size:1rem;
+      margin-left:0.75rem;
+
+
+}
+.sticky-nav-options{
+      display:flex;
+      justify-content:center ;
+      align-items: center;
+      
+}
+.nav-item{
+      margin-right:1rem
+}
+.dark-badge{
+      background-color: #000;
+      color:#fff;
+}
+.user{
+      background-color: #000;
+      height:25px;
+      width:25px;
+      border-radius: 50%;
+      margin-right:2rem;
+      text-align:center;
+      padding-left:0.25rem;
+      padding-top: 0.2rem;
+
+}
+@media(max-width:1000px){
+      .hide{
+            display:none
+      }
+}
+.card{
+      background-color: #232323;
+      width:150px;
+      border-radius: 0.5rem;
+      padding:1.5rem;
+      margin-left:1.5rem;
+      margin-top:1rem ;
+}
+.cards-container{
+      display:flex;
+      flex-wrap: wrap;
+      
+      
+}
+.card-img{
+    width:100%;
+    border-radius: 0.5rem;
+}
+.card-title{
+      font-weight:600;
+}
+.card-info{
+      font-size:0.85rem;
+      opacity:0.5;
+}
+.footer{
+      height:300px;
+      display:flex;
+      align-items: center;
+      justify-content: center;
+}
+.line{
+      width:90%;
+      height:50%;
+      border-top: 1px solid white;
+      opacity:0.4;
+}
+.music-player{
+      display: flex;
+      justify-content: space-between;
+      align-items:center;
+}
+.album{
+      display:flex;
+      width:25%;
+      padding:0 1rem 0 1rem;
+      justify-content: flex-start;
+      align-items: center;
+}
+.player{
+      width:50%;
+}
+.controls{
+  display:flex;
+      width:25%;
+      padding:0 1rem 0 1rem;
+      justify-content: flex-start;
+      align-items: center;
+}
+    
+
+.player-controls{
+      display: flex;
+      justify-content: center;
+      align-items:center;
+}
+
+.player-control-icon{
+      height:1rem;
+      margin-right:1.75rem;
+      opacity:0.7;
+}
+.player-control-icon:hover{
+      opacity:1;
+}
+.playback-bar{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+}
+.progress-bar{
+      width:70%;
+      appearance: none; /*what apperanec property will do means , for many elements bydefault properties will come along with them when we use them ex. border for button like taht , to remove them we'll go for the appearance : none*/
+      background-color: transparent;
+      cursor: pointer;   /*to get hand wala symbol while moving that range*/
+}
+.progress-bar::-webkit-slider-runnable-track{
+      background-color: #ddd;
+      border-radius:100px ;
+      height:0.2rem;
+      
+}
+.progress-bar::-webkit-slider-thumb{
+      appearance:none;
+      height:1rem;
+      width:1rem;
+      background-color: #1bd760;
+      border-radius: 50%;
+      margin-top:-6px
+}
+.album img{
+      height:2rem ;
+      width:2rem;
+      border-radius: 0.2rem;
+}
+.album p{
+      font-size: 0.75rem;
+}
+.it{
+      margin-right: 1rem;
+}
+.controls input::-webkit-slider-runnable-track{
+      appearance: none;
+      background-color: #ddd;
+      border-radius: 100px;
+       height:0.2rem;
+
+}
+.controls input::-webkit-slider-thumb{
+      appearance:none;
+      height:1rem;
+      width:1rem;
+      background-color: #1bd760;
+      border-radius: 50%;
+      margin-top:-6px
+}
+.last{
+      margin-right: 0.5rem;
+}

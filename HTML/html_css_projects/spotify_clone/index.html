@@ -1,0 +1,179 @@
+<!--In  this project you learn the process to carry to do any type of project ,so learn from here
+In this project we mainly use rem not px....bec when we use rem there will be more responsiveness 
+This project is about cloning the spotify website, where you cannot do right click and simply open the inspect option, it is not possible bec some Js settimgs don't allow it , but to do so ,
+1.after signing up into the website you copy that link , go to incognito  or new window,right click , open inspect option ,then... paste, open the same spotify website , alraedy the website opens with inspect option open
+
+2.go to the settings(3 dots) then go to privacy and setting , turn off js , then come open website , open inspect option ,then turn on js , but it is lengthly procedure
+
+3.you can use shortcut on the website , it will open
+
+4.right click on the search option , i'll open the inspect option-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!--the above is the font awesome cdn link to get the icons-->
+        <link rel="icon" href="./asssts/logo.png">
+        <!--relation we should give icon not stylesheet , href as inner folder and file thats it -->
+        <!--very imp thing that you should know is that , right now you are in index.html page ,so with relation to index.html , where your icon file is there that  you should see, when you want any child of index.html 's parent(teachers_css_project),you should follow this syntax  ./childfolder/file-->
+        <title>Spotify - Web Player: Music for everyone</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <!--this preconnect links is going to connectk our page to the API and that API is going to provide us the differt fonts-->
+        <!--we cannot use the font present in the spotify website , bec it is the custom font , that will be having the copyright , we are going to use the similar font , in google fonts-->
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <!--You can see how many parts does the website is mainly divided by clicking inspect option and going to edge parts(padding , green) -->
+       <div class="main">
+        <div class="sidebar">
+            <div class="nav">
+                <div class="nav-option" style="opacity:1">
+                    <i class="fa-solid fa-house"></i>
+                    <a href="#" >Home</a>
+                </div>
+                <div class="nav-option">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <a href="#">Search</a>
+                </div>
+            </div>
+            <div class="library">
+                <div class="options">
+                    <div class="lib-option nav-option" > <!--I want all the property values applied to the nav-option to get applied to the lib-option also-->
+                    <img src="./asssts/library_icon.png">  <!--library icon is not available in font awasome soo we took it from original spotify website only in the form of image-->
+                    <a href="#" >Your Libraray</a>
+                    </div>
+                    <div class="icons">
+                        <i class="fa-solid fa-plus"></i>
+                        <i class="fa-solid fa-arrow-right"></i> 
+                    </div>
+                </div>
+                <div class="lib-box">
+                    <div class="box">
+                        <p class="box-p1">Create your first playlist</p> <!--here instead of using <p> we can go with div , bec when the screen size decreases that content inside the div will wrap iside it and go to next line-->
+                        <p class="box-p2">It's easy we'll help you</p>
+                        <button class="badge">Creat playlist</button>
+                    </div>
+                     <div class="box">
+                        <p class="box-p1">Let's find some podcasts to follow</p>
+                        <p class="box-p2">We'll keep you updated on now episodes</p>
+                        <button class="badge">Browse podcats</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="sticky-nav">
+
+                <div class="sticky-nav-icons">
+                <i class="fa-solid fa-backward"></i>
+                <i class="fa-solid fa-forward hide" ></i>
+                </div>
+
+                <div class="sticky-nav-options">
+                <button class="badge nav-item hide">Explore Premium</button>
+                <button class="badge nav-item dark-badge"><i class="fa-solid fa-download" style="margin-right:5px"></i>Install App</button>
+                <div class="user" ><i class="fa-regular fa-user nav-item"></i></div>
+                </div>
+
+            </div>
+
+            <h2>Recently played</h2>
+            <div class="cards-container">
+                <div class="card">
+                    <img src="./asssts/card1img.jpeg" class="card-img">
+                    <p class="card-title">Top 50 - Global</p>
+                    <p class="card-info">Your daily update of the most played ...</p>
+                </div>
+            </div>
+
+             <h2>Trending now near you</h2>
+            <div class="cards-container">
+                <div class="card">
+                    <img src="./asssts/card2img.jpeg" class="card-img">
+                    <p class="card-title">Top 50 - Global</p>
+                    <p class="card-info">Your daily update of the most played ...</p>
+                </div>
+                <div class="card">
+                    <img src="./asssts/card3img.jpeg" class="card-img">
+                    <p class="card-title">Top 50 - Global</p>
+                    <p class="card-info">Your daily update of the most played ...</p>
+                </div>
+                <div class="card">
+                    <img src="./asssts/card4img.jpeg" class="card-img">
+                    <p class="card-title">Top 50 - Global</p>
+                    <p class="card-info">Your daily update of the most played ...</p>
+                </div>
+                 <div class="card">
+                    <img src="./asssts/card1img.jpeg" class="card-img">
+                    <p class="card-title">Top 50 - Global</p>
+                    <p class="card-info">Your daily update of the most played ...</p>
+                </div>
+                 <div class="card">
+                    <img src="./asssts/card3img.jpeg" class="card-img">
+                    <p class="card-title">Top 50 - Global</p>
+                    <p class="card-info">Your daily update of the most played ...</p>
+                </div>
+            </div>
+
+            <h2>Featured Charts </h2>
+            <div class="cards-container">
+                <div class="card">
+                    <img src="./asssts/card5img.jpeg" class="card-img">
+                    <p class="card-title">Top 50 - Global</p>
+                    <p class="card-info">Your daily update of the most played ...</p>
+                </div>
+                <div class="card">
+                    <img src="./asssts/card6img.jpeg" class="card-img">
+                    <p class="card-title">Top songs - India</p>
+                    <p class="card-info">Your daily update of the most played ...</p>
+                </div>
+                <div class="card">
+                    <img src="./asssts/card1img.jpeg" class="card-img">
+                    <p class="card-title">Top 50 - Global</p>
+                    <p class="card-info">Your daily update of the most played ...</p>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="line"></div>
+            </div>
+        </div>
+        <div class="music-player">
+            <div class="album">
+                <img src="./asssts/forest-grass-green-1125776.jpg" class="it">
+                <p class="it"><span style="font-weight: 700;">Daylight</span> <br>David kuishnor</p>
+                <i class="fa-regular fa-heart it" ></i>
+                <i class="fa-regular fa-camera it" ></i>
+            </div>
+            <div class="player">
+                <div class="player-controls">
+                    <img src="./asssts/player_icon1.png" class="player-control-icon">
+                    <img src="./asssts/player_icon2.png" class="player-control-icon">
+                    <img src="./asssts/player_icon3.png" class="player-control-icon" style="opacity:1;height:2rem;"> <!--this is the iamge you cannot give the font-size you have to give the height-->
+                    <img src="./asssts/player_icon4.png" class="player-control-icon">
+                    <img src="./asssts/player_icon5.png" class="player-control-icon">
+                </div>
+                <div class="playback-bar">
+                    <span class="curr-time">00:00</span>
+                    <input type="range" min="0" max="100" class="progress-bar" step="1">
+                    <span class="tot-time">3:33</span>
+                </div>
+            </div>
+            <div class="controls">
+                <i class="fa-solid fa-circle-play last"></i>
+                <i class="fa-solid fa-microphone last"></i>
+                <i class="fa-solid fa-bars last"></i>
+                <i class="fa-solid fa-gift last"></i>
+                <i class="fa-regular fa-headphones last"></i>
+                <input type="range">
+            </div>
+        </div>
+       </div>
+
+        
+    </body>
+</html>
