@@ -1,0 +1,42 @@
+h2{
+    color:brown;
+    
+}
+h1{
+    color:black;
+
+}
+span{
+    color:cadetblue
+}
+.card{
+  
+    width:300px;
+    border:3px solid black;
+    border-radius:20px;
+    padding:10px;
+    margin:10px; /* earlier you ahve missed thsi margin soo during resizing the widths both the cards are touching so putting margin is very important soo you will able to mainatin that space be cards even after responsive*/
+ 
+}
+img{
+    width:100%; /* image is not normal inline element but replace inline element soo you acn directly apply widtha nd height properties*/
+   height:200px;
+    border-radius: 20px 20px 20px  20px;
+}
+.desc{
+    margin-top:10px;
+    
+}
+.main{
+    display:flex;
+    flex-direction: row;
+    /*here by mistakely you ahve given the flex-wrap : wrap , so 2nd card is going to next line when space becomes less at random rezing width not exactly at 375px(as mention in media query)*/
+    justify-content: space-evenly;
+   
+}
+@media(max-width:375px){ /*it is not becoming responsive exactly at 375 but below it is becoming responsive*/
+    .main{
+       
+        flex-wrap: wrap;   /*flex wrap is enough no need to go for flex-direction column and all*/
+    }
+}

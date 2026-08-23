@@ -1,0 +1,54 @@
+body{
+    text-align: center;
+}
+.btn    {
+    height: 200px;
+    width:200px;
+    border-radius: 20%;
+    border:10px solid black;
+   
+}
+
+/* .btn-container{
+   display:flex;
+   justify-content: center;
+}
+.red{
+    background-color: red;
+}
+.yellow{
+    background-color: yellow;
+}
+.purple{
+    background-color: purple;
+}
+.green{
+    background-color: green;
+} */
+
+.btn-container{
+    height: 500px;
+    width:500px;
+    display:flex;                      /*you should add the flex properties to the parent */
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+.red{
+    background-color:red ;
+}
+.yellow{
+    background-color:yellow ;
+}
+.purple{
+    background-color: purple;
+}
+.green  {
+    background-color: greenyellow;
+}
+.gameflash{
+    background-color: whitesmoke;
+}
+.userflash{
+    background-color: aquamarine;
+}

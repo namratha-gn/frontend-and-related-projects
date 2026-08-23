@@ -1,0 +1,29 @@
+h1:hover{
+    color: blue;
+    text-decoration: wavy red underline;
+    background-color: cadetblue;
+}
+/* h2:hover{
+    color: darkblue;
+    background-color: lawngreen;
+    text-align: center;
+    text-decoration: double green;
+} */
+h2:active{
+    color: darkred;
+    background-color: khaki;
+    text-align: right;
+    text-decoration: rebeccapurple dotted;
+}
+input[type="text"]:hover+label{
+     color: darkblue;
+    background-color: lawngreen;
+    text-align: center;
+    text-decoration: double green;
+}
+div:nth-of-type(3n){
+     color: darkred;
+    background-color: khaki;
+    text-align: right;
+    text-decoration: rebeccapurple dotted;
+}

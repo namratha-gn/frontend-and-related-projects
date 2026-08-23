@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Forms in html</title>
+    </head>
+    <body>
+        <form action="/action.php"> <!--Starting of form tag and link to where the data should store and the action performing the data is going to be in the form of Name-value pair with the link-->
+            <label for="name">Username</label>
+            <br> <!--For attribute is for linking label and input box nad 'username is the name given to the label'-->
+            <input type="text" id="name" placeholder="username" name="Username">
+            <br> <!-- we are using 3 attributes here id is for linking the input to the label name attribute if for sending the data for the location through the link connected by the name-value pair-->
+            <button type="submit">submit</button>
+            &nbsp; <!--There are 3 types of button that we can use namely submit,button,reset-->
+            <button type="reset">reset</button><!--You just think about the example of searching something the youtube or browser and notice the link where the youtube search bar is also a kind of input that you are giving-->
+        </form>
+
+        
+    </body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>practice question in the form</title>
+        </head>
+        <body>
+            <form action="https://www.google.com/search?"> 
+                <label for="googleit">Search below</label>
+                <br>
+                
+                <input type="text" id="googleit" placeholder="search here" name="q">
+                <br>
+                
+                <button type="submit">Search</button>
+            </form>
+            
+        </body>
+    </html>
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Checkbox in forms</title>
+    </head>
+    <body>
+        <form action="/server"> <!--I want to send the data to this location-->
+
+            <!--checkbox concept-->
+            <div><label for="age">Are you above 18 years</label> <!--Are you above 18 years is the label here-->
+                <br>
+                <input type="checkbox" id="age" name="age" checked><!--i am working on type checkbox , if you give checked attribute then byeefault the box is in ticked form-->
+                <br>
+                <button type="submit">submit</button><!--After you submit it in the place you of (name = age and value=on or nothing ) in the link/url depending on whether you checked or unchecked -->
+            </div>
+
+            <!--radio concept-->
+            <div><label for="gender">Male</label>
+                <input type="radio" id="gender" name="gender">
+                
+                <label for="gender">Female</label>       <!--You should know the difference bw the checkbox and the radio , think there are group of checkboxes and radio  that you have made, in checkbox you can check or tick the multiple checkboxes but in radio you can only tick one radio -->
+                <input type="radio" id="gender" name="gender"><!--why in radio we can only select one in many radio bec we have kept the name as same for all the radios as gender , that name is going to take only one value with it-->
+                
+                <label for="gender">Others</label>
+                <input type="radio" id="gender" name="gender">
+                <br>    
+            
+                <button type="submit">submit</button></div>
+
+
+            <div><label for="gender1">Male</label>
+                <input type="radio" id="gender1" name="gender1"> <!--here i have given different names to each radio then we can tick multiple radios at a time because each name is taking its corresponding values-->
+        
+                <label for="gender2">Female</label>   
+                <input type="radio" id="gender2" name="gender2">  
+                
+                <label for="gender3">Others</label>
+                <input type="radio" id="gender3" name="gender3">
+
+                <button type="submit">submit</button>
+            </div>
+
+            <div><label for="gender">Male</label> <!--Here i have explicitly defining the value that the url is going to take along with the name-->
+                <input type="radio" id="gender" name="gender" value="Male"> 
+        
+                <label for="gender">Female</label>   
+                <input type="radio" id="gender" name="gender"  value='Female'>  
+                
+                <label for="gender">Others</label >
+                <input type="radio" id="gender" name="gender" value="others">
+
+                <button type="submit">submit</button>
+        
+                </div>
+        </form>
+    </body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdowns using select element</title>
+</head>
+<body>
+    <!--Dropdown (select element) concept-->
+    <form action="/server">
+    <div><label for="city">Select the city</label> <!--I am using label here-->
+    <br>
+    <select name="city" id="city">
+        <option value="cbp">Chikkaballapur</option>
+        <option value="bang">Bangalore</option>
+        <option value="hybd">Hyderabad</option>
+    </select>
+    <br>
+    <button type="submit">submit</button>
+    </div>
+
+    <select name="flavour" id="fla">  <!--I am writing the code without the label tag-->
+        <option>Select the flavour</option> <!--without label i am indicating the label inside the dropdown only whih apperes at the top-->
+        <option value="chaco">Chocolate</option>
+        <option value="veni" selected>venilla</option> <!--I am using selected option here (optional)-->
+        <option value="red">Red velvet</option>
+    </select>
+    <button type="submit">Submit</button>
+
+
+    </form>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Range in forms</title>
+    </head>
+    <body>
+        <form action="/server"> <!--Range concept-->
+            <label for="vol">Select the volume level</label>
+            <input type="range" id="vol" step="20" name="volume" min="0" max="500" value="50"> <!--this are the 7 attributes of input in range concept-->
+            <button type="submit">submit</button>
+        </form>
+    </body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>textarea concept</title>
+</head>
+<body>
+    <form action="/server">
+    <labe for="feedback">Enter your valuable feedback</labe>
+    <textarea id="feedback" name="feed" rows="5" cols="20" placeholder="enter your feedback here"></textarea> <!--Bydefault it is going to take 2 rows and 10 cols and here you cannot write the value attribute inside the textarea tag-->
+    <button>submit</button>
+    </form> 
+</body>
+</html>

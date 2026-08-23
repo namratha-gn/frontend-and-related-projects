@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Engineering Colleges in India</title>
+  <style>
+    :root {
+      --bg-color: #f0f4f8;
+      --text-color: #000;
+      --card-bg: #fff;
+      --header-bg: #004080;
+    }
+
+    body.dark-mode {
+      --bg-color: #121212;
+      --text-color: #fff;
+      --card-bg: #1f1f1f;
+      --header-bg: #222;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: var(--bg-color);
+      color: var(--text-color);
+      transition: all 0.3s ease;
+    }
+
+    header {
+      background-color: var(--header-bg);
+      color: white;
+      padding: 20px;
+      text-align: center;
+      position: relative;
+    }
+
+    #clock {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 16px;
+      background: white;
+      color: #004080;
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    .controls {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 15px 20px;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    input[type="text"] {
+      padding: 10px;
+      font-size: 16px;
+      width: 250px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      padding: 10px 15px;
+      font-size: 14px;
+      border: none;
+      border-radius: 5px;
+      background-color: #004080;
+      color: white;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0059b3;
+    }
+
+    .college-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .college {
+      background: var(--card-bg);
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      width: 300px;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+      animation: fadeIn 1s ease-in;
+    }
+
+    .college:hover {
+      transform: scale(1.05);
+    }
+
+    .college img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .college-content {
+      padding: 15px;
+    }
+
+    .college-content h2 {
+      margin: 0;
+      font-size: 20px;
+      color: #004080;
+    }
+
+    body.dark-mode .college-content h2 {
+      color: #66b2ff;
+    }
+
+    .college-content p {
+      font-size: 14px;
+      margin: 10px 0;
+    }
+
+    .college-content a {
+      color: #0073e6;
+      text-decoration: none;
+    }
+
+    .college-content a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      padding: 20px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: var(--header-bg);
+      color: white;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Top Engineering Colleges in India</h1>
+    <div id="clock">00:00:00</div>
+  </header>
+
+  <div class="controls">
+    <input type="text" id="searchBox" placeholder="Search college name...">
+    <button onclick="searchCollege()">🔍 Search</button>
+    <button onclick="toggleDarkMode()">🌙 Toggle Dark Mode</button>
+  </div>
+
+  <div class="college-container" id="collegeContainer">
+    <div class="college" data-name="IIT Madras" data-url="https://www.iitm.ac.in">
+      <img src="https://upload.wikimedia.org/wikipedia/en/e/e6/IIT_Madras_Logo.png" alt="IIT Madras">
+      <div class="college-content">
+        <h2>IIT Madras</h2>
+        <p>Located in Chennai, known for top engineering and research.</p>
+        <a href="https://www.iitm.ac.in" target="_blank">Visit Website</a>
+      </div>
+    </div>
+
+    <div class="college" data-name="IIT Bombay" data-url="https://www.iitb.ac.in">
+      <img src="https://upload.wikimedia.org/wikipedia/en/thumb/7/75/IIT_Bombay_Logo.svg/1200px-IIT_Bombay_Logo.svg.png"
+        alt="IIT Bombay">
+      <div class="college-content">
+        <h2>IIT Bombay</h2>
+        <p>Premier institute for tech & innovation in India.</p>
+        <a href="https://www.iitb.ac.in" target="_blank">Visit Website</a>
+      </div>
+    </div>
+
+    <div class="college" data-name="NIT Trichy" data-url="https://www.nitt.edu">
+      <img src="https://upload.wikimedia.org/wikipedia/en/e/e0/NIT_Trichy_Logo.png" alt="NIT Trichy">
+      <div class="college-content">
+        <h2>NIT Trichy</h2>
+        <p>Top-ranked NIT offering UG & PG programs.</p>
+        <a href="https://www.nitt.edu" target="_blank">Visit Website</a>
+      </div>
+    </div>
+
+    <div class="college" data-name="BITS Pilani" data-url="https://www.bits-pilani.ac.in">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/en/thumb/d/d4/BITS_Pilani-Logo.svg/1200px-BITS_Pilani-Logo.svg.png"
+        alt="BITS Pilani">
+      <div class="college-content">
+        <h2>BITS Pilani</h2>
+        <p>Private institute offering BITSAT-based admissions.</p>
+        <a href="https://www.bits-pilani.ac.in" target="_blank">Visit Website</a>
+      </div>
+    </div>
+  </div>
+
+  <section>
+    <h2>🎓 Admission Procedure</h2>
+    <p style="font-size: 16px;">
+      Admissions to IITs require qualifying <strong>JEE Advanced</strong> (after JEE Main).
+      NITs, IIITs, and GFTIs take students via <strong>JEE Main</strong> ranks.<br /><br />
+      BITS Pilani, VIT, SRM conduct their own entrance exams like <strong>BITSAT</strong>, <strong>VITEEE</strong> etc.
+    </p>
+  </section>
+
+  <footer>
+    &copy; 2025 Engineering Colleges Info Portal | Built with ❤️
+  </footer>
+
+  <script>
+    function updateClock() {
+      const now = new Date();
+      let h = now.getHours().toString().padStart(2, '0');
+      let m = now.getMinutes().toString().padStart(2, '0');
+      let s = now.getSeconds().toString().padStart(2, '0');
+      document.getElementById("clock").textContent = `${h}:${m}:${s}`;
+    }
+
+    setInterval(updateClock, 1000);
+    updateClock();
+
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark-mode");
+    }
+
+    function searchCollege() {
+      const query = document.getElementById("searchBox").value.trim().toLowerCase();
+      const colleges = document.querySelectorAll(".college");
+
+      let exactMatch = null;
+
+      colleges.forEach(college => {
+        const name = college.getAttribute("data-name").trim().toLowerCase();
+        const url = college.getAttribute("data-url");
+
+        // Show/hide cards based on partial match
+        college.style.display = name.includes(query) ? "block" : "none";
+
+        // Save exact match
+        if (name === query) {
+          exactMatch = url;
+        }
+      });
+
+      if (exactMatch) {
+        window.open(exactMatch, "_blank");
+      }
+    }
+  </script>
+</body>
+
+</html>

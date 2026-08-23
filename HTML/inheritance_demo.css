@@ -1,0 +1,60 @@
+h1{
+    color:darkslategrey;
+   
+    text-align: center;
+    text-decoration: wavy purple underline;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: normal;
+    line-height: normal;
+
+}
+h2{
+    color:cornflowerblue;
+    text-align: start;
+    text-decoration: double orchid underline;
+    font-size: 27px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: normal;
+    line-height: normal;
+
+}
+form label{
+    color:hotpink;
+    text-align: left;
+    text-decoration:  dotted yellowgreen underline;
+    font-size: 27px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: normal;
+    line-height: normal;
+}
+input{
+    color:blue;
+    background-color: darkseagreen;
+   
+ 
+    
+    
+}
+button{
+    color:black;
+    background-color: greenyellow;
+}
+p{
+    color:purple
+}
+span{
+    font-weight: bold;
+    font-size: 20px;
+    text-decoration: purple underline;
+}
+*{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    background-color: pink;
+    
+}
+

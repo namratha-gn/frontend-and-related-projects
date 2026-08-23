@@ -1,0 +1,34 @@
+/* #container{
+    height:800px;
+    width:51%;
+    border: 5px solid darkcyan;
+    border-radius: 30px;
+    margin : 0 auto;
+    display:flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+
+}
+#container div{
+
+    height:200px;
+    width:200px;
+    border: 5px solid black;
+    border-radius: 20px;
+    margin:20px;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 75px;
+    background-color: grey;
+} */
+
+*{
+ 
+    background-image:url("photo.jpg") ;
+}
+
+div{
+    height:200px;
+    width:200px;
+    background-color: aqua;
+}

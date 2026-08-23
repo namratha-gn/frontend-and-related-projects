@@ -1,0 +1,163 @@
+*{
+    margin:0; /*it is going to create the clean slate........soo usually when we start any project we start with this*/
+    padding:0; /*removes the extra or defaults margins and the paddings present in lists and other elements */
+    font-family: "Roboto", sans-serif;
+}
+.main_box{
+    background-image: url(photo.jpg);  /*  see what you  are doing when you want insert a background image and also think of the  */
+    background-size: cover;
+    height:100vh;   /*here i have not mentioned the width and used height only bec main_box i am using is the div (outer part) , div is the block element , it takes the entire width of the screen by default , next we want the height , so we are taking tahts it*/
+}
+.btn_one{
+    color: white;
+    font-size: 30px;
+    font-weight: 700;
+    position:absolute; /* see why we are using the position absolute but not position fixed*/
+    left:16px; 
+    /* margin-left:10px */
+    line-height:60px;
+    transition: all 0.3s linear ; /* 1.increasing the font size or 2.scaling 3.increase opacity */
+ 
+    
+}
+.sidebar_menu{
+    position:fixed;
+    left:-350px;         /* very evry important LOGIC*/
+    height:100vh;
+    width:300px;
+   background-color:rgba(255,255,255,0.1);
+   box-shadow: 0 0 8px rgba(255,255,255,0.5);
+   transition: all 0.3s linear 0s;
+
+}
+.sidebar_menu .logo{
+    position:absolute;
+    width: 100% ;
+    line-height:60px;                      /*You can go with line-height or height*/
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
+    text-align: center;
+}
+.sidebar_menu .logo a{
+    /* position:absolute;
+    left:50px; */      
+
+    /* Remember This Rule
+
+    If a child is position: absolute;, the parent treats it like it is not there.
+
+    So avoid unnecessary position:absolute.
+    Use padding / margin / flex for alignment unless absolute positioning is truly needed. */
+
+
+    /* ✅ Simple Rule to Remember
+    Use position:absolute for child when…	Do not use position:absolute when…
+    You want to place something freely (like a small icon, badge, popup, arrow, overlay).	You want the parent size to depend on the child (like logo text, menu text, buttons, headings).
+
+    🧠 Convert This into Mental Pictures
+    Without Absolute	With Absolute
+    Child sits inside parent box	Child floats outside parent box
+    Parent grows based on child	Parent ignores the child
+    Good for text, headings, menu items	Good for icons, badges, popups
+    */
+    
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    color: rgba(255,255,255,1);
+
+}
+.sidebar_menu .btn_two i{
+    font-size: 25px;
+    line-height: 60px;
+    font-weight: 700;
+    color: gray;
+    position:absolute;
+    left:275px;
+    /* cursor:pointer; to show / give signal that you can click on that (hand image)*/
+    opacity: 0;
+    transition: all 0.3s linear;
+
+}
+.sidebar_menu .menu{
+    position:absolute;
+    width:100%;
+    /* left:20px; */
+    top:80px
+}
+.sidebar_menu .menu li{
+    margin-top:6px;
+    padding:14px 20px;
+    list-style: none;  /* you can delete the bullet dots of the unorder list */
+    /* when  you tried to remove that bullet points or dots or when they were their the content(i and a) moved little right when you tried to 
+    apply box shadow , it is applying to whole thing*/
+   
+}
+.sidebar_menu .menu i,a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+.sidebar_menu .menu i{
+    padding-right:5px
+}
+.sidebar_menu .social_media{
+   
+    color:rgba(255,255,255);
+    opacity:0.4;
+    position: absolute;
+    left:25%;
+    bottom:50px;
+    
+}
+.sidebar_menu .social_media i{
+    color:rgb(255,255,255);
+    opacity:0.5;
+    padding: 0 5px ;
+}
+#check{
+    display: none; /*see when you make that disapper there the space formation atkes palce then all the elemsnts move upwards*/
+
+}
+.sidebar_menu .menu li:hover{
+     box-shadow: 0 0 5px rgba(255,255,255,0.5);
+}
+.btn_one:hover{
+    font-size: 35px;
+    cursor: pointer;   /*LOGIC*/
+   
+    
+}
+.sidebar_menu .btn_two :hover{
+    font-size: 31px;
+  
+}
+.sidebar_menu .logo:hover{
+    box-shadow: 0 0 15px white;
+}
+.sidebar_menu .social_media i:hover{
+   opacity:1;
+   transform:scale(1.2)
+}
+
+/*~ == sibling symbol*/
+#check:checked  ~ .sidebar_menu{                        /*LOGIC*/
+left:0px;                                               /*LOGIC*/
+}                                                       /*LOGIC*/
+#check:checked ~ .btn_one {                             /*LOGIC*/
+   display: none;                                       /*LOGIC*/
+}                                                        /*LOGIC*/
+#check:checked ~ .sidebar_menu .btn_two i{               /*LOGIC*/
+    opacity: 1;                                          /*LOGIC*/
+}
+
+/* NEW PROPERTIES
+ 1.cursor:pointer
+ 2.list-style:none
+*/
+
+/*AFTER HOVERING
+1.you can increase the font
+2.you can do transform:scale....so it will come upwards ...looks good
+3.increase the opacity and alpha channel
+4.put box-shadow little more*/
+

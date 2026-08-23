@@ -1,0 +1,132 @@
+/* *{
+    font-family:'Courier New';
+    
+}
+
+h1,h3{
+    color:#B92B27;
+}
+#login{
+    background-color:white;
+    
+}
+#signup{
+    background-color:pink;
+}
+.upvote{
+    background-color: blueviolet;
+    color:greenyellow
+}
+.ans{
+    background-color: darkblue;
+    color:deepskyblue
+} */
+
+ /* *{
+    font-family:'Courier New', Courier, monospace
+}
+h3{
+    color:#1b74e4;
+} */
+  /* decendant selector (we can skip multiple levels unlike child combinator)
+
+  p a{                    First type 
+    color:purple;
+    background-color: yellowgreen;
+ } 
+ .post a{                  Second type
+    color:purple;
+    background-color: yellowgreen;
+ }
+ nav ul li{                Third type
+    color:chocolate;
+ }
+ nav ul li a{              Fourth type (See the difference bw each type 
+    color:palegreen;   Here we can skip multiple levels and can write nav a{},this is also correct
+ }
+   */
+/* Adjacent sibling combinator */
+
+/* p+h3{                           type 1
+    text-decoration:underline;
+}
+ .upvote + .ans{                  Type 2
+    color:cyan;
+    background-color:cornflowerblue;
+} 
+.upvote+button{                   Type 3
+    color:darkviolet;
+}
+ Child Combinator(for only direct decendent , means only two levels)*/
+ /* div>input{
+    background-color: darkblue;
+}  */ 
+
+/* Attribute selector*/
+/* input[type="text"]{    type 1
+    color:red;
+}
+input[type="password"]{
+    color:chartreuse;
+}
+input[type]{          type 2
+    color:darkslategrey;
+} */
+
+/*Pseudo*/
+
+/* button:hover{
+    background: purple;
+    color: white;
+}
+h3:hover{
+    text-decoration:none;
+} */
+#quora{
+    color: darkmagenta;
+}
+header{
+    background-color: plum;
+}
+h1 button:hover{
+    color:blue;
+    background-color: aqua ;
+}
+h1 + div > input{
+    color:darkblue;
+    background-color: aquamarine;
+   
+}
+nav ul li{
+    color:crimson;
+}
+nav ul li a{
+    color: darkred;
+    text-decoration: none;
+}
+main{
+    background-color: aqua;
+}
+.post{
+    color:darkmagenta
+}
+.post > a{
+    color:darkgreen
+}
+p + h3:hover{
+    color:blue;
+    text-decoration: double line-through;
+
+}
+span > button{
+    color:darkblue;
+    background-color: cornflowerblue;
+}
+#last{
+    color:darkorchid;
+    font-size:20px;
+}
+#last > a{
+    color:deeppink;
+    font-weight: 700;
+}

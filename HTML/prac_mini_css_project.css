@@ -1,0 +1,123 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: "Playwrite NO", cursive;
+    color:aliceblue
+}
+.main_box{
+    height:100vh;
+
+    background-image: url("pic.jpg");
+    background-size: cover;
+
+}
+#click{
+    display:none;   /*there is a difference bw opaticy:0 and dispaly:none.......display:none removes the space also but opacity will keep space tehn hides*/
+}
+
+/* see here , after you gave position property to both btn_one and sidebar_menu , then only sidebar_menu took the full length ,
+when you give only sidebar_menu , it is not going to take full length */
+
+.btn_one{
+    position:fixed;
+    left:20px;
+    line-height: 60px;
+}
+.btn_one i{
+    color:aliceblue;
+    z-index: 1000;
+    font-size: 20px;
+    text-decoration: none;
+    opacity: 1;
+    transition: all 1s ease-in 0;
+}
+.sidebar_menu{
+    position:fixed;                                                           
+    left:-300px; 
+    height:100%;
+    width:300px;
+    background-color: #231709;
+    /*when you put the overflow:hideen proprety here , it hide all the part inside the sidebar soo you will not able to side the shadow of other parts */
+    box-shadow:  0 0 5px white;
+    transition: all 0.5s linear ;
+}
+.logo{
+    width:100%;
+    line-height: 60px;
+    text-align: center;
+    box-shadow: 0 0 5px white;
+}
+.logo a{
+    text-decoration: none;
+    color:white;
+}
+.btn_two{
+    position:absolute;
+    left:270px;
+     top:0px;
+    line-height: 60px;
+    font-size: 20px;
+    transition: font-size 0.2s linear
+    
+}
+.sidebar_menu .menu{
+   position:absolute;
+   width:100%;
+   top:60px;
+}
+.menu ul li{
+   width:100%;
+   line-height: 60px;
+  
+   list-style: none;
+}
+#first_li{
+    margin-top: 20px;
+}
+.menu ul li a{
+    text-decoration: none;
+}
+.social_media{
+    position:absolute;
+    bottom:50px;
+    left:80px;
+}
+.social_media a i{
+    padding:2px;
+    font-size:15px;
+
+    transition: font-size 0.5s linear;
+    
+
+}
+.menu ul li:hover{
+    box-shadow: 0 0 5px white;
+}
+.logo:hover{
+    box-shadow: 0 0 20px white;
+
+}
+
+.menu ul{
+    padding-left:10px;
+    
+}
+.social_media a i:hover{
+    font-size:20px;
+    box-shadow: 0 0 2px white;
+}
+.btn_one i:hover{
+  font-size: 25px;
+}
+
+#click:checked ~ .sidebar_menu{
+    left:0px;
+}
+
+#click:checked ~.sidebar_menu .btn_two{
+    opacity: 1;
+}
+.btn_two:hover{
+    font-size: 22px;
+}
+

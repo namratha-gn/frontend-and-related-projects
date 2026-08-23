@@ -1,0 +1,39 @@
+.out{
+    height:200px;
+    width:150px;
+    border:4px solid black;
+    margin:20px;
+    display:inline-block;
+    border-radius:10px;
+    box-shadow: 1px 1px 10px black;
+    transition:box-shadow 1s ease 0s; /* I should see the image is coming out of plane when i hover*/
+    vertical-align: top;  /*to ignore the adjustment of text baseline and movement of whole  div down or up*/
+}
+img{
+    width:100%;  /* you cannot put width and heigt property durectly to inline elements , use the relative units*/
+    height:50%;
+    border-radius:10px 10px 0 0; /*setting the border radius of image at top left and right not div border radius*/
+}
+.man{
+    color:black;
+    font-weight: 700;
+     padding:0px 5px 0px 30px;
+}
+.out:hover{
+    box-shadow: 5px 5px 20px blue;
+}
+section{
+    width:550px; /*section should have width to use the margin property*/
+    height:500px;
+    margin: 0 auto;
+    margin-top:250px;
+}
+
+
+
+
+
+
+
+
+

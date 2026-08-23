@@ -1,0 +1,56 @@
+
+
+ h1{         
+    color:Brown;
+    background-color: lightcoral;
+
+  }
+p{
+    color:green;
+    background-color: darkslategrey;
+}
+button{
+    color:blue;
+    background-color:darkkhaki;
+} 
+ h2{
+    color:orange
+}
+p{
+    color:white;
+    background-color: black
+}
+button{
+    color:white;
+    background-color:blue  
+} 
+
+
+/* color systems */
+
+
+/* 1.named color system */
+ h1{
+    color:pink     /*this syntax you are going to write in the .css file*/
+} 
+
+/* 2.rgb color system */
+ p{
+    color:rgb(255,0,0);  /*this syntax you are going to write in the .css file*/
+    color:rgb(0,255,0);
+    color:rgb(0,0,255) 
+} 
+
+/* 3.Hexadecimal or Hex code color system */
+ h2{
+    color:#0000ff;       /*this syntax you are going to write in the .css file*/ 
+    color:#ff0000;       /*First 2 terms for red then next 2 for green and next 2 for blue*/
+    color:#00ff00;
+
+    color:fff;       /*Hexacode can also be written in 3 terms (think each term twice */
+    color:000;
+    color:0f0;
+} 
+
+/* Use mdn and color picker for rgb and hexa code of different colors*/
+

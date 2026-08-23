@@ -1,0 +1,112 @@
+ h6{
+    text-align:center;           
+    font-weight: 900; /* in the scale of 100 to 900 in the steps of 100 (400 is normal)*/
+    text-decoration:line-through; /* 1st method*/
+    text-decoration-color:blue;    /* 1st method*/
+    text-decoration: dotted red line-through; /* 2nd method (use this method)*/
+    line-height:normal;
+    letter-spacing:normal;
+    font-size:30px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+
+}
+h6{
+    text-align:left;
+    font-weight:700;
+    text-decoration:overline;
+    text-decoration:blue overline;
+    text-decoration:wavy blue overline;
+    line-height:3.0;
+    letter-spacing:20px;
+    font-size:45px;
+    font-family:'Times New Roman', Times, serif
+
+}
+h6{
+    text-align:justify;
+    font-weight:400;
+    text-decoration: blue line-through;
+    line-height:normal;
+    line-height:normal;
+    letter-spacing:50px;
+    font-size:50px;
+    font-family:Georgia, 'Times New Roman', Times, serif
+
+
+  
+}
+h6{
+    text-align:justify;
+    font-weight:normal;
+    text-decoration: dotted grey underline;
+    line-height:normal;
+    letter-spacing:10px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+h6{
+    text-decoration:none;
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+
+} 
+h6{ 
+    color:orange;
+    text-align:center;
+    text-decoration:double teal underline;
+    text-transform: capitalize;
+    font-size: 55px;
+    font-weight: 900;
+    font-family:'Times New Roman', Times, serif;
+    line-height: 0.75;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+
+}
+
+
+body{
+    background-color: wheat;
+    font-family:Georgia;
+}
+h1{
+    text-align:center;
+    color:red;
+
+}
+h3{
+    text-align:center;
+    color:black;
+    
+
+}
+p{ 
+    color:brown;
+    text-align:center;
+   
+    line-height: 30px;
+
+ 
+
+}
+h4{
+    text-align:center;
+
+}
+a{
+    color:rgb(0,255,0);
+    text-decoration:none;
+
+}
+textarea{
+        color:rgb(0,0,0);
+
+}
+button{
+    background-color: white;
+    color:blueviolet;
+
+
+}
+span{
+    text-decoration: underline;
+}

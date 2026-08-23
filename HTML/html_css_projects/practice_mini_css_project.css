@@ -1,0 +1,135 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    
+   
+}
+.main_box{
+    background-image: url(photo.jpg);
+    background-size: cover;
+    height:100vh;
+}
+.sidebar_menu{
+    height:100vh;
+    width:300px;
+    background-color: rgba(255,255,255,0.1);
+    box-shadow:0 0 10px white;
+    position:fixed;
+    left:-350px;
+    transition: all 0.2s linear;
+}
+#check{
+    opacity:0;
+}
+.btn_one{
+    position:fixed;
+    left:15px;
+    font-size: 30px;
+    font-weight: 15px;
+    line-height:60px;
+    opacity: 1;
+    color: white;
+}
+.sidebar_menu .logo{
+    position:absolute;
+    width:100%;
+    box-shadow: 0 0 5px white;
+    line-height: 60px;
+}
+.sidebar_menu .logo p{
+    text-align:center;
+    font-size:20px;
+    color: aliceblue;
+
+}
+.btn_two{
+    position:absolute;
+    left:270px;
+    line-height:60px;
+    font-size: 23px;
+    color: rgba(255,255,255,0.5);
+
+}
+.sidebar_menu .menu{
+   position:absolute;
+   width:100%;
+   top:80px;
+}
+
+
+/* ✅ When .sidebar_menu is position: fixed, it becomes a positioned ancestor (same as relative, absolute, or sticky).
+So, .menu (which is position: absolute) should position itself inside .sidebar_menu.
+That’s correct — it will not go outside as long as the sidebar has a width. */
+
+
+
+/* 👉 This is the key point —
+If .sidebar_menu is not positioned (no position: relative),
+then .menu will be positioned relative to the whole page, not the sidebar box.
+That’s why your version looked like it’s coming out of the box.
+
+2. width: 100%
+
+When your teacher wrote width: 100%,
+it means 100% of the parent container’s width.
+
+So if .sidebar_menu has a fixed width (say 250px),
+then .menu’s width = 250px.
+✅ It fits perfectly inside.
+
+But in your version, if .sidebar_menu is not positioned,
+then .menu’s width = 100% of the whole screen.
+🚫 That’s why it overflowed beyond your sidebar. */
+
+
+.sidebar_menu .menu li{
+   
+   margin-top:3px;
+   padding:14px 20px;
+   color: white;
+   transition: font-size 0.5s linear;
+  
+
+ 
+}
+.sidebar_menu .menu li a{
+text-decoration: none;
+font-size: 25px;
+color: white;
+}
+.sidebar_menu .menu li i{
+    padding-right:10px;
+    
+}
+.sidebar_menu .social_media{
+    position:absolute;
+    bottom:80px;
+    left:100px;
+}
+.sidebar_menu .social_media i{
+    padding:5px;
+    color:rgba(255,255,255,0.8)
+}
+#check:checked ~ .sidebar_menu{
+    left:0px;
+    
+}
+#check:checked ~ .btn_one{
+    opacity:0;
+}
+#check:checked ~.sidebar_menu .btn_two i{
+    opacity:1;
+}
+.btn_one:hover{
+    font-size:35px;
+
+}
+.btn_two:hover{
+    font-size:25px
+}
+.sidebar_menu .menu li:hover{
+   box-shadow: 0 0 10px white;
+   font-size: 30px;
+}

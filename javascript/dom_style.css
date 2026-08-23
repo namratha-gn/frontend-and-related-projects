@@ -1,0 +1,93 @@
+body {
+  font-family: Arial;
+}
+
+#mainImg {
+  width: 35%;
+}
+
+.box {
+  border: 0.25px solid black;
+  background-color: lightgray;
+  width: 200px;
+  padding: 1rem;
+}
+
+.boxLink {
+  text-decoration: none;
+}
+
+.oldImg {
+  height: 200px;
+  width: 200px;
+  margin-right: 1rem;
+}
+
+#description {
+  background-color: antiquewhite;
+}
+
+
+/* .prop{
+  color:red;
+}
+.blue{
+  color:blue
+}
+
+.pink{
+  
+  background-color: pink;
+  border:5px solid black;
+} */
+
+
+ /* .newline{
+  display:block;
+ }
+ #btn{
+  background-color: blue;
+  color:white;
+ }
+.purple{
+  color:purple;
+} */
+
+/*activity */
+
+/* h2{
+  text-align: center;
+}
+div{
+  height: 100px;
+  width:50%;
+  border:1px solid black;
+  text-align: center;
+}
+*{
+  margin: 0 auto;
+}
+button {
+  display: block;
+  margin: 0 auto;
+} */
+/* .box{
+  height:100px;
+  width:100px;
+  background-color: palevioletred;
+} */
+
+/* .heading{
+  background-color: palevioletred;
+  color: black;
+} */
+ div{
+  background-color: palegoldenrod;
+  height: 200px;
+  width:200px;
+  margin:2px;
+  overflow: auto;
+ }
+ .click{
+      background-color: green;
+ }
