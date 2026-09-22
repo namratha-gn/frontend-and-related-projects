@@ -1,0 +1,25 @@
+
+.parent{
+    border:3px solid black;
+    height:500px;
+    width: 200px;
+    margin:0 auto;
+}
+.magu{
+    height: 100px;
+    width: 100px;
+     border:2px solid black;
+     margin: 0 auto;
+     margin-bottom: 30px;
+     border-radius: 50%;
+}
+.child1{
+    margin-top:75px;
+    background-color: red;
+}
+.child2{
+    background-color:yellow ;
+}
+.child3{
+    background-color: green;
+}
